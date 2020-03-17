@@ -29,6 +29,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="콜버튼 (CALL)"/>
+
+        <Button
+            android:id="@+id/messageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="문자 보내기"/>
+
     </LinearLayout>
 
 </layout>

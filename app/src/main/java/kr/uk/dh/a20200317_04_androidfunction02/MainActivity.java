@@ -47,11 +47,19 @@ public class MainActivity extends AppCompatActivity {
 //              현재까지 배운것만으론 실행 불가 : 권한 획득 X
                 Uri uri = Uri.parse("tel:01051121212");
                 Intent intent = new Intent(Intent.ACTION_CALL, uri);
-                startActivity(intent);
+//                startActivity(intent);
             }
         });
 
-
+        binding.messageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("smsto:01011112222");
+                Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+                intent.putExtra("sms_body", "공유 메세지 내용");
+                startActivity(intent);
+            }
+        });
 
     }
 }
